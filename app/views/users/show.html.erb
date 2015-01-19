@@ -1,0 +1,14 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+<% content_for :title do %>User<% end %>
+<h3>User</h3>
+<div class="form">
+  <%= simple_form_for @user do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :first_name, autofocus: true %>
+  <%= f.input :last_name %>
+  <%= f.input :email%>
+  <%= f.input :password %>
+<%= f.button :submit, 'Submit', class: 'submit' %>
+<% end %>
+</div>
