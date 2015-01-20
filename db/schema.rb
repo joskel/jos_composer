@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150114224900) do
+ActiveRecord::Schema.define(version: 20150120111526) do
+
+  create_table "appointments", force: true do |t|
+    t.time     "start_time"
+    t.time     "stop_time"
+    t.date     "date"
+    t.integer  "schedule_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "role_name",  limit: 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedules", force: true do |t|
+    t.time     "start_time_1"
+    t.time     "stop_time_1"
+    t.time     "start_time_2"
+    t.time     "stop_time_2"
+    t.integer  "weekday"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

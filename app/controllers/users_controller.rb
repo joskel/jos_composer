@@ -10,7 +10,9 @@ class UsersController < ApplicationController
   def new
   end
 
-  def edit
+  def update
+    User.save = params(:user)
+    
   end
 
   def delete
